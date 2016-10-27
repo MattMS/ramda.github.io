@@ -31,10 +31,19 @@
         -webkit-overflow-scrolling: touch; /* 1 */
 
         li {
+            /* Fixes long function names
+               in sidebar which cause the category label
+               to overflow the enclosing <li>
+            */
+            display: flex;
+
             margin: 0;
         }
 
         a {
+            width: 100%;
+            word-wrap: break-word;
+
             padding: @padding @margin;
             border-radius: 0;
 
